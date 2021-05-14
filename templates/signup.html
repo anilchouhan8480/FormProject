@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+</head>
+<body>
+	<h1>Signup here!</h1>
+	<form method="post">
+		{% csrf_token %}
+		Enter First Name: <input type="text" name="fname"/><br>
+		Enter Last Name: <input type="text" name="lname"/><br>
+		Enter User Name: <input type="text" name="uname"/><br>
+		Enter Email: <input type="email" name="email"/><br>
+		Enter Password: <input type="Password" name="pwd"/><br>
+		Enter Age: <input type="number" name="age"><br>
+		Enter Salary: <input type="text" name="salary"><br>
+		Enter Addresh: <input type="text" name="addresh"><br>
+
+		<input type="submit">
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Article</title>
+</head>
+<body>
+       <h1>Add Article here!</h1>
+       <form method="post">
+       	  {% csrf_token %}
+       	  {{ obj.as_p }}
+       	  <input type="submit" value="Add">
+       </form>
+       <hr>
+       <table>
+       	  <tr> 
+       	  	  <th>Title</th>
+       	  	  <th>Description</th>
+       	  	  <th>Author</th>
+       	  	  <th>Delete</th>
+              <th>update</th>
+
+       	  </tr>
+          
+       </table>
+              {% for i in aobjs %}
+
+      
+                  <tr>
+                     
+                     <td>{{i.title}}</td>
+                     <td>{{i.desc}}</td>
+                     <td>{{i.author}}</td>
+                     <td><a href="{% url 'del_article' id=i.id %}">Delete</a></td>
+                     <td><a href="#">update</a></td>
+
+              {% endfor %}
+                  </tr>
+
+
+
+</body>
+</html>
