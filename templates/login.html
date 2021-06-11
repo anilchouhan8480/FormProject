@@ -1,7 +1,10 @@
-<form method="post">
+<form method="post" style="text-align: center;">
 			{% csrf_token %}
-Enter User name<input type="text" name="uname">
+Enter User name<input type="text" name="uname"><br><br>
 
-Enter User name<input type="password" name="pwd">
-<input type="submit" >
+Enter User name<input type="password" name="pwd"><br><br>
+<input type="submit" ><br><br>
+
+<a href="{% url 'reset_password' %}">Forget Password</a>
+
 </form>
